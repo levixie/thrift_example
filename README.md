@@ -14,6 +14,7 @@ How to run server code
 run ```thrift_example/trunk/example# PYTHONPATH=./py python -m py.server.server```
 
 How to run the client code
+
 1. go int example/php folder. 
 
 run ```php Client.php```
