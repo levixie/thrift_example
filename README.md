@@ -6,12 +6,16 @@ the build.sh is the script to build the client/server code for thrift files. Whi
 
 How to run server code
 1. create the virutalenv(options)
+
 2. pip install -r requirements.txt
+
 3. go into example folder. 
+
 run ```thrift_example/trunk/example# PYTHONPATH=./py python -m py.server.server```
 
 How to run the client code
 1. go int example/php folder. 
+
 run ```php Client.php```
 
 you should see th output
