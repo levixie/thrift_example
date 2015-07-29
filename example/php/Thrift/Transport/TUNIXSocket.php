@@ -271,7 +271,7 @@ class TUNIXSocket extends TTransport {
       $writable = @stream_select($null, $write, $null, $this->sendTimeoutSec_, $this->sendTimeoutUsec_);
       if ($writable > 0) {
         // write buffer to stream
-        $written = @stream_socket_sendto($this->handle_, $buf);
+        $written = @fwrite($this->handle_, $buf, TStringFuncFactory::create()->strlen($buf));
         if ($written === -1 || $written === false) {
           throw new TTransportException('TUNIXSocket: Could not write '.TStringFuncFactory::create()->strlen($buf).' bytes '.
                                    $this->filename_);
